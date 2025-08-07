@@ -1,0 +1,20 @@
+defaults:
+  - _self_
+  - training: default
+  - validation: default
+  - testing: default
+  - data: wave
+  - model: minconvlstm
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+limit_threads: 1
+device: cuda:0
+verbose: True
+seed: 1234
+
+hydra:
+  verbose: False
+  #output_subdir: null
+  run:
+    dir: outputs/${model.name}/

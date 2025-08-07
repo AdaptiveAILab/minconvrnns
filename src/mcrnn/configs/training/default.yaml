@@ -1,0 +1,11 @@
+defaults:
+  - criterion: mse
+  - optimizer: adam
+  - scheduler: constant
+
+epochs: 30
+clip_gradients: False
+batch_size: 1
+save_model: true
+continue_training: false
+teacher_forcing_steps: 30

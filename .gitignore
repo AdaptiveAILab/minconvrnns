@@ -1,0 +1,35 @@
+# Plotting files
+*.png
+*.mp4
+*.pdf
+
+# Tensorboard model checkpoints and training progress files
+*.ckpt
+*events.*
+
+# Data formats
+*.mat
+*.nc
+*.np
+*.npy
+*.zarr
+
+# Directories
+*__pycache__*
+*outputs/*
+*plots/*
+**/netcdf/
+.idea/
+**/logs/
+**/.ipynb_checkpoints/
+**/outputs/
+/src/mcrnn/data/data_generation/data/
+
+# Python and pytorch files
+*.pyc
+
+# Apple Finder files
+*.DS_Store
+
+# slurm outputs
+*.out

@@ -1,0 +1,17 @@
+_target_: data.pytorch_datasets.GeopotentialDataset
+data_path: [data, netcdf, geopotential_500_5.625deg]
+train_start_date: 1979-01-01
+train_end_date: 2014-12-31
+val_start_date: 2015-01-01
+val_end_date: 2016-12-31
+test_start_date: 2017-01-01
+test_end_date: 2018-12-31
+timedelta: 1
+init_dates: null
+normalize: True
+num_workers: 1
+drop_last: false
+downscale_factor: 2
+height: 16
+width: 32
+sequence_length: 24

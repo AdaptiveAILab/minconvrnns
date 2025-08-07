@@ -1,0 +1,35 @@
+# @package _global_
+
+# Override entire onfiguration yaml files
+defaults:
+  - override /data: wave
+  - override /model: convlstm
+  - override /training/scheduler: plateau
+  - override /training/optimizer: adamw
+  - override /model/norm: group_norm
+
+# Override individual fields in each configuration file
+device: cuda:0
+
+data:
+  noise: 5e-1
+
+model:
+  name: wv_clstm3x12
+  hidden_sizes: [12, 12, 12]
+  padding_mode: zeros
+
+training:
+  batch_size: 10
+  teacher_forcing_steps: 85
+  epochs: 200
+  optimizer:
+    lr: 5e-3
+
+validation:
+  batch_size: 10
+  teacher_forcing_steps: 85
+
+testing:
+  teacher_forcing_steps: 85
+  sequence_length: 150

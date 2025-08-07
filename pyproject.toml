@@ -1,0 +1,36 @@
+[project]
+name = "mcrnn"
+version = "0.0.1"
+authors = [
+  { name="Cosku Can Horuz", email="cosku.horuz@uni-luebeck.de" },
+  { name="Matthias Karlbauer", email="matthias.karlbauer@uni-tuebingen.de" },
+  { name="Sebastian Otte", email="sebastian.otte@uni-luebeck.de"}
+]
+description = "Machine learning package for efficient spatiotemporal gated RNNs such as minConvLSTM and minConvGRU."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+  "einops",
+  "hydra-core",
+  "numpy==1.26",
+  "tensorboard",
+	"torch",
+  "torchvision",
+  "tqdm",
+  "xarray[complete]",
+  "matplotlib"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcrnn"]
+
+[project.urls]
+Homepage = "https://github.com/"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

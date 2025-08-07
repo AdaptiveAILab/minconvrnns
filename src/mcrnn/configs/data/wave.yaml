@@ -1,0 +1,9 @@
+_target_: data.pytorch_datasets.WaveDataset
+data_path: [data, numpy]
+dataset_name: wave16x16
+num_workers: 0
+drop_last: false
+height: 16
+width: 16
+noise: 0.0
+sequence_length: 101

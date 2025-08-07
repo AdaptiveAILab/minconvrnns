@@ -1,0 +1,15 @@
+defaults:
+  - norm: layer_norm
+
+_target_: models.minConvGRU
+_recursive_: False
+name: minconvgru_00
+batch_size: ${training.batch_size}
+input_size: 1
+hidden_sizes: [16, 16]
+height: ${data.height}
+width: ${data.width}
+device: ${device}
+bias: True
+padding_mode: zeros
+tanh_encoder: False

@@ -1,0 +1,12 @@
+_target_: data.pytorch_datasets.NavierStokesDataset
+data_path: [data, netcdf, navier-stokes]
+train_set_name: ns_r1e+03_n1000_t50_s64.nc
+val_set_name: ns_r1e+03_n50_t50_s64.nc
+test_set_name: ns_r1e+03_n200_t51_s64.nc
+normalize: false
+num_workers: 1
+drop_last: false
+height: 16
+width: 16
+sequence_length: 15
+downscale_factor: 4

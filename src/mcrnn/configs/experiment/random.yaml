@@ -1,0 +1,13 @@
+# @package _global_
+
+# Override entire onfiguration yaml files
+defaults:
+  - override /data: random
+  - override /model: convlstm
+
+# Override individual fields in each configuration file
+device: cuda:0
+
+model:
+  name: rnd_clstm4x40
+  hidden_sizes: [40, 40, 40, 40]

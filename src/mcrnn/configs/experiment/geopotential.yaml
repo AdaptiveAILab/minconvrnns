@@ -1,0 +1,32 @@
+# @package _global_
+
+# Override entire onfiguration yaml files
+defaults:
+  - override /data: geopotential
+  - override /model: convlstm
+  - override /training/scheduler: cosine
+  - override /training/optimizer: adam
+  - override /model/norm: layer_norm
+
+# Override individual fields in each configuration file
+device: cuda:0
+
+model:
+  name: gp_clstm3x12
+  hidden_sizes: [12, 12, 12]
+  padding_mode: cylinder
+
+training:
+  batch_size: 1
+  teacher_forcing_steps: 20
+  epochs: 20
+  optimizer:
+    lr: 1e-3
+
+validation:
+  batch_size: 1
+  teacher_forcing_steps: 20
+
+testing:
+  teacher_forcing_steps: 20
+  sequence_length: 168

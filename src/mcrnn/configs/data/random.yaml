@@ -1,0 +1,9 @@
+_target_: data.pytorch_datasets.RandomDataset
+num_workers: 1
+n_samples_train: 500
+n_samples_val: 50
+n_samples_test: 100
+sequence_length: 50
+height: 8
+width: 8
+drop_last: false

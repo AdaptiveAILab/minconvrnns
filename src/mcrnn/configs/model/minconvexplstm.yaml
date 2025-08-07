@@ -1,0 +1,15 @@
+defaults:
+  - norm: layer_norm
+
+_target_: models.minConvExpLSTM
+_recursive_: False  # Do not instantiate norm automatically
+name: minconvexplstm
+batch_size: ${training.batch_size}
+input_size: 1
+hidden_sizes: [16, 16]
+height: ${data.height}
+width: ${data.width}
+device: ${device}
+bias: True
+padding_mode: zeros
+tanh_encoder: False
