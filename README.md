@@ -154,11 +154,15 @@ evaluates all models in the `outputs` directory that have `clstm` in their name.
 If you find this repository helpful, please cite:
 
 ```bibtex
-@article{horuz2025minimal,
-  title={Minimal Convolutional RNNs Accelerate Spatiotemporal Learning},
-  author={Horuz, Co\c{s}ku Can and Otte, Sebastian and Butz, Martin V. and Karlbauer, Matthias},
-  journal={arXiv preprint arXiv:2508.03614},
-  year={2025}
+@InProceedings{horuz2025minimal,
+   author="Horuz, Co{\c{s}}ku Can and Otte, Sebastian and Butz, Martin V. and Karlbauer, Matthias",
+   title="Minimal Convolutional RNNs Accelerate Spatiotemporal Learning",
+   booktitle="Artificial Neural Networks and Machine Learning -- ICANN 2025",
+   year="2025",
+   publisher="Springer Nature Switzerland",
+   address="Cham",
+   pages="545--557",
+   isbn="978-3-032-04558-4"
 }
 ```
 ---
